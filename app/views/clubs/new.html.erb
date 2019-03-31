@@ -1,0 +1,42 @@
+<h1>New Club</h1>
+<%= form_for :club, url: clubs_path do |f| %>
+    <p>
+        Club Name
+        <%=f.label :'' %><br>
+        <%= f.text_field :clubName %>
+    </p>
+    
+    <p>
+        Who We Are
+        <%= f.label :''  %><br>
+        <%= f.text_area :whoWeAre  %>
+    </p>
+    
+    <p>
+        When do you meet?
+        <%= f.label :'' %><br>
+        <%= f.text_area :dates %>
+    </p>
+    
+    <p>
+        Where do you meet?
+        <%= f.label :'' %><br>
+        <%= f.text_area :location %>
+    </p>
+    
+    <p>
+        Contact phone
+        <%= f.label :'' %><br>
+        <%= f.text_field :phone %>
+    </p>
+    
+    <p>
+        Contact email
+        <%= f.label :'' %><br>
+        <%= f.text_field :email %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
