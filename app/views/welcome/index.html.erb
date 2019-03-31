@@ -71,16 +71,27 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-button {
+loginbutton {
     background-color: #046A38;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
+    padding: 10px 18px;
+    position: relative;
+    margin-right: 14px;
+    margin-top: 20px;
+    float: right;
+    width: auto;
+}
+
+.modalloginbutton {
+    background-color: #046A38;
+    color: white;
+    padding: 10px 18px;
+    float: right;
+    width: auto;
     cursor: pointer;
 }
 
-button:hover {
+loginbutton:hover {
     opacity: 0.8;
 }
 
@@ -161,6 +172,10 @@ span.psw {
         width: 100%;
     }
     
+    .modalloginbutton {
+        width: 100%;
+    }
+    
     .topnav .search-container {
         float: none;
     }
@@ -194,28 +209,33 @@ span.psw {
     </div>
 </div>
 
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<loginbutton onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</loginbutton>
 
 <div id="id01" class="modal">
     <form class="modal-content animate" action="/action_page.php">
         
     <div class="container">
+        <p>
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>
+        </p>
         
+        <p>
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
+        </p>
         
-        <button type="submit">Login</button>
+        <p>
         <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
+        </p>
+        
     </div>
 
-    <div class="container" style="background-color:#f1f1f1"
+    <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+        <modalloginbutton type="button" onclick="document.getElementById('id01').style.display='none'" class="modalloginbutton">Login</modalloginbutton>
     </div>
   </form>
 </div>
