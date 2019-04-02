@@ -5,4 +5,7 @@ class ClubsController < ApplicationController
     def create
         render plain: params[:clubs].inspect
     end
+    
+    def save
+    end
 end
