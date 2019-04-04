@@ -3,9 +3,19 @@ class ClubsController < ApplicationController
     end
     
     def create
-        render plain: params[:club].inspect
+        @club = Club.new(club_params)
+        
+        if @club.save
+            redirect_to @club
+        else
+            render 'new'
+        end
     end
     
-    def save
-    end
 end
+
+private
+    def club_params
+        params.require(:club).permit(:clubName, :whoWeAre, :dates, :location, :phone, :email)
+end
+
