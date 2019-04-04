@@ -3,7 +3,7 @@ class ClubsController < ApplicationController
     end
     
     def create
-        render plain: params[:clubs].inspect
+        render plain: params[:club].inspect
     end
     
     def save
