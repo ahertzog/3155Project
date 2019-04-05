@@ -20,37 +20,37 @@
 <%= form_for :club, url: clubs_path do |f| %>
     <p>
         Club Name
-        <%= f.label :'' %><br>
+        <%= f.label :clubName %><br>
         <%= f.text_field :clubName %>
     </p>
     
     <p>
         Who We Are
-        <%= f.label :''  %><br>
+        <%= f.label :whoWeAre  %><br>
         <%= f.text_field :whoWeAre  %>
     </p>
     
     <p>
         When do you meet?
-        <%= f.label :'' %><br>
+        <%= f.label :date %><br>
         <%= f.text_field :date %>
     </p>
     
     <p>
         Where do you meet?
-        <%= f.label :'' %><br>
+        <%= f.label :location %><br>
         <%= f.text_field :location %>
     </p>
     
     <p>
         Contact phone
-        <%= f.label :'' %><br>
+        <%= f.label :phone %><br>
         <%= f.text_field :phone %>
     </p>
     
     <p>
         Contact email
-        <%= f.label :'' %><br>
+        <%= f.label :email %><br>
         <%= f.text_field :email %>
     </p>
     
