@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :blogs
   
   root 'welcome#index'
+  root 'about#index'
 end
