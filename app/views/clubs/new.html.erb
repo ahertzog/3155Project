@@ -25,17 +25,20 @@
     
     <p>
         Who We Are<br>
-        <%= f.text_field :whoWeAre  %>
+        <%= f.text_area :whoWeAre  %>
     </p>
     
     <p>
         When do you meet?<br>
+        <%= month_calendar do |date| %>
+          <%= date %>
+        <% end %>
         <%= f.text_field :date %>
     </p>
     
     <p>
         Where do you meet?<br>
-        <%= f.text_field :location %>
+        <%= f.text_area :location %>
     </p>
     
     <p>
