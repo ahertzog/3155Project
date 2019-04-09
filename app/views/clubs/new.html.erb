@@ -8,7 +8,7 @@
 <div class="topnav">
     <a href="/welcome/index">Home</a>
     <a class ="active" href="#clubs">Clubs</a>
-    <a href="blog">Blog</a>
+    <a href="/blogs/new">Blog</a>
     <div class="search-container">
     <form action="/action_page.php">
         <input type="text" placeholder="Search.." name="search">
@@ -19,38 +19,35 @@
 <h1>New Club</h1>
 <%= form_for :club, url: clubs_path do |f| %>
     <p>
-        Club Name
-        <%= f.label :'' %><br>
+        Club Name<br>
         <%= f.text_field :clubName %>
     </p>
     
     <p>
-        Who We Are
-        <%= f.label :''  %><br>
-        <%= f.text_field :whoWeAre  %>
+        Who We Are<br>
+        <%= f.text_area :whoWeAre  %>
     </p>
     
     <p>
-        When do you meet?
-        <%= f.label :'' %><br>
+        When do you meet?<br>
+        <%= month_calendar do |date| %>
+          <%= date %>
+        <% end %>
         <%= f.text_field :date %>
     </p>
     
     <p>
-        Where do you meet?
-        <%= f.label :'' %><br>
-        <%= f.text_field :location %>
+        Where do you meet?<br>
+        <%= f.text_area :location %>
     </p>
     
     <p>
-        Contact phone
-        <%= f.label :'' %><br>
+        Contact phone<br>
         <%= f.text_field :phone %>
     </p>
     
     <p>
-        Contact email
-        <%= f.label :'' %><br>
+        Contact email<br>
         <%= f.text_field :email %>
     </p>
     

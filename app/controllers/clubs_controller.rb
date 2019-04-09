@@ -1,23 +1,47 @@
 class ClubsController < ApplicationController
-   
-    def new
-        
+    def index
+        @clubs = Club.all
     end
     
+    def show
+        @club = Club.find(params[:id])
+    end
+    
+    def new
+        @club = Club.new
+    end
+    
+    def edit
+        @club = Club.find(params[:id])
+    end
+    
+    def update
+        @club = Club.find(params[:id])
+        if @club.update(club_params)
+            redirect_to @club
+        else
+            render 'edit'
+        end
+    end
+    
+    def destroy
+        @club = Club.find(params[:id])
+        @club.destroy
+        
+        redirect_to clubs_path
+    end
+    
+    
     def create
-        render plain: params[:club].inspect
+        @club = Club.new(club_params)
+        
         
         if @club.save
             redirect_to @club
         else
-            render :new
+            render 'new'
         end
     end
-    
-    def index
-        @Clubs = Club.all
-    end
-    
 end
 
 private
