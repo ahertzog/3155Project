@@ -1,61 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="topnav.scss">
-   </head>
-   <body>
-      <div class="topnav">
-         <a class="active" href="index">Home</a>
-         <a href="/clubs/new">Clubs</a>
-         <a href="/blogs/new">Blog</a>
-         <div class="search-container">
-            <form action="/action_page.php">
-               <input type="text" placeholder="Search.." name="search">
-               <button type="submit">Submit</button>
-            </form>
-         </div>
-      </div>
-      <div class="title">
-         NINER INTERACT
-      </div>
-      <loginbutton onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</loginbutton>
-      <div id="id01" class="modal">
-         <form class="modal-content animate" action="/action_page.php">
-            <div class="container">
-               <p>
-                  <label for="uname"><b>Username</b></label>
-                  <input type="text" placeholder="Enter Username" name="uname" required>
-               </p>
-               <p>
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-               </p>
-               <p>
-                  <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                  </label>
-               </p>
-            </div>
-            <div class="container" style="background-color:#f1f1f1">
-               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-               <modalloginbutton type="button" onclick="document.getElementById('id01').style.display='none'" class="modalloginbutton">Login</modalloginbutton>
-            </div>
-         </form>
-      </div>
-      <script>
-         var modal = document.getElementById('id01');
-         
-         window.onclick = function(event) {
-             if (event.target == modal) {
-                 modal.style.display = "none";
-             }
-         }
-      </script>
-   </body>
-</html>
-=======
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="topnav.scss">
@@ -77,8 +21,6 @@
 <div class="title">
     NINER INTERACT
 </div>
-
-<img src="unccLogo.jpg" alt="UNCC Logo">
 
 <loginbutton onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</loginbutton>
 
@@ -125,4 +67,3 @@ window.onclick = function(event) {
 
 </body>
 </html>
->>>>>>> 5f01989689865e2678fb83e175f4fe6012dc5dda
