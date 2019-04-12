@@ -1,0 +1,16 @@
+<h1>Listing clubs</h1>
+ 
+<table>
+  <tr>
+    <th>clubName</th>
+    <th>whoWeAre</th>
+  </tr>
+ 
+  <% @articles.each do |club| %>
+    <tr>
+      <td><%= club.clubName %></td>
+      <td><%= club.whoWeAre %></td>
+      <td><%= link_to 'Show', club_path(club) %></td>
+    </tr>
+  <% end %>
+</table>
