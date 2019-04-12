@@ -1,16 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="topnav.scss">
+</head>
+<body>
+
+<div class="topnav">
+    <a href="/welcome/index">Home</a>
+    <a class="active" href="clubs">Clubs</a>
+    <a href="blogs">Blog</a>
+    <div class="search-container">
+    <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</div>
+
 <h1>Listing clubs</h1>
  
 <table>
   <tr>
-    <th>clubName</th>
-    <th>whoWeAre</th>
+    <th>Club Name</th>
+    <th>About Us</th>
+    <th>Location</th>
+    <th>Contact</th>
   </tr>
  
   <% @clubs.each do |club| %>
     <tr>
       <td><%= club.clubName %></td>
       <td><%= club.whoWeAre %></td>
+      <td><%= club.location %></td>
+      <td><%= club.email %></td>
       <td><%= link_to 'Show', club_path(club) %></td>
+      <td><%= link_to 'Edit', edit_club_path(club) %></td>
+      <td><%= link_to 'Delete', 
+                              club_path(club),
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' }%></td>
     </tr>
   <% end %>
 </table>
