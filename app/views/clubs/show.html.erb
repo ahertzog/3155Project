@@ -1,23 +1,48 @@
-<p>
-    <%= @club.clubName %>
-</p>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="topnav.scss">
+    <link rel="stylesheet" href="clubs.scss">
+</head>
+<body>
 
+<div class="topnav">
+    <a href="/welcome/index">Home</a>
+    <a class="active" href="clubs">Clubs</a>
+    <a href="blogs">Blog</a>
+    <div class="search-container">
+    <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</div>
+
+<div class = title> 
+    <%= @club.clubName %>
+</div>
+    
 <p>
+    whoweare
     <%= @club.whoWeAre %>
 </p>
 
 <p>
+    date
     <%= @club.date %>
 </p>
 
 <p>
+    location
     <%= @club.location %>
 </p>
 
 <p>
+    phone
     <%= @club.phone %>
 </p>
 
 <p>
+    email
     <%= @club.email %>
 </p>
