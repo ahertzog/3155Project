@@ -1,6 +1,44 @@
+.title {
+    font-size: 100px;
+    font-family: 'TradeGothicLTStd-BdCn20',Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    color: #046A38;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 h1 {
     font-size: 32px;
     color: white;
     background: #046A38;
     text-align: center;
+}
+
+#clubs {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#clubs th {
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #046A38;
+    color: white;
+}
+
+#clubs td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#clubs tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+a.notTopLink {
+    font-size: 20px;
 }
