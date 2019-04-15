@@ -27,22 +27,32 @@
     <%= @club.whoWeAre %>
 </div>
 
-<div>
+<div class = date>
     date
     <%= @club.date %>
 </div>
 
-<div>
-    location
-    <%= @club.location %>
+<div id = map>
+    
 </div>
 
-<div>
+<div class = contact>
     phone
     <%= @club.phone %>
-</div>
-
-<div>
     email
     <%= @club.email %>
 </div>
+
+<script>
+    function initMap() {
+        var location = this.clubName;
+        var map = new google.maps.Map(document.getElementById('map'), 
+        {zoom: 4, center: location});
+        var marker = new google.maps.Marker({position: location, map: map});
+    }
+</script>
+
+<script> async defer
+    src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDfYEvtCQNEZkXL9Q7Yb7B8k4hJoaXUJQs&callback=initMap">
+
+</script>
