@@ -81,7 +81,10 @@ loginbutton {
 }
 
 loginbutton:hover {
-    opacity: 0.8;
+    background-color: #B9975B;
+    color: white;
+    cursor: pointer;
+    margin-right: 4px;
 }
 
 .cancelbtn {
