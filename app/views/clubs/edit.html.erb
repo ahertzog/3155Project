@@ -7,6 +7,20 @@
 
 <%= render 'topnav' %>
 
+    <div id="id01" class="modal">
+        <%= render 'modal' %>
+    </div>
+
+    <script>
+    var modal = document.getElementById('id01');
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
 <h1>Editing club</h1>
  
 <%= form_for :club, url: club_path(@club), method: :patch do |f| %>

@@ -5,35 +5,19 @@
 </head>
 
 <body>
-<%= render 'topnav' %>
+    <%= render 'topnav' %>
 
-<div id="id01" class="modal">
-    <form class="modal-content animate" action="/action_page.php">
-        <div class="container">
-            <p>
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-            </p>
+    <div id="id01" class="modal">
+        <%= render 'modal' %>
+    </div>
 
-            <p>
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-            </p>
+    <script>
+    var modal = document.getElementById('id01');
 
-            <p>
-                <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </p>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <modalloginbutton type="button" onclick="document.getElementById('id01').style.display='none'" class="modalloginbutton">Login</modalloginbutton>
-        </div>
-    </form>
-</div>
-
-<title>Blogs - NINER INTERACT</title>
-
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
 </body>

@@ -7,6 +7,11 @@
 <body>
 
 <%= render 'topnav' %>
+
+<div id="id01" class="modal">
+    <%= render 'modal' %>
+</div>
+
 <div class=title> New Club </div>
 <%= form_for :club, url: clubs_path do |f| %>
     <p>
@@ -46,3 +51,14 @@
         <%= f.submit %>
     </p>
 <% end %>
+
+<script>
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
