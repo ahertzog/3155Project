@@ -7,9 +7,9 @@
 <body>
 
 <div class="topnav">
-    <a href="/welcome/index">Home</a>
-    <a href="clubs">Clubs</a>
-    <a class="active" href="blogs">Blog</a>
+    <%= link_to('Home', '/welcome/index') %>
+    <%= link_to('Clubs', '/clubs') %>
+    <%= link_to('Blogs', '/blogs') %>
     <div class="search-container">
     <form action="/action_page.php">
         <input type="text" placeholder="Search.." name="search">

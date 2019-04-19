@@ -7,9 +7,10 @@
 <body>
 
 <div class="topnav">
-    <a href="/welcome/index">Home</a>
-    <a class="active" href="clubs">Clubs</a>
-    <a href="blogs">Blog</a>
+    <%= link_to('Home', '/welcome/index') %>
+    <%= link_to('Clubs', '/clubs') %>
+    <%= link_to('Blog', '/blogs') %>
+   
     <div class="search-container">
     <form action="/action_page.php">
         <input type="text" placeholder="Search.." name="search">
@@ -32,8 +33,8 @@
     <%= @club.date %>
 </div>
 
-<div id = map>
-    
+<div>
+    location
 </div>
 
 <div class = contact>
@@ -42,17 +43,3 @@
     email
     <%= @club.email %>
 </div>
-
-<script>
-    function initMap() {
-        var location = this.clubName;
-        var map = new google.maps.Map(document.getElementById('map'), 
-        {zoom: 4, center: location});
-        var marker = new google.maps.Marker({position: location, map: map});
-    }
-</script>
-
-<script> async defer
-    src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDfYEvtCQNEZkXL9Q7Yb7B8k4hJoaXUJQs&callback=initMap">
-
-</script>
