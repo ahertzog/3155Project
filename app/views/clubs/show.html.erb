@@ -6,18 +6,7 @@
 </head>
 <body>
 
-<div class="topnav">
-    <%= link_to 'Home', '/welcome/index' %>
-    <%= link_to'Clubs', '/clubs' %>
-    <%= link_to'Blogs', '/blogs' %>
-   
-    <div class="search-container">
-    <form action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit">Submit</button>
-    </form>
-    </div>
-</div>
+<%= render 'topnav' %>
 
 <div class = title> 
     <%= @club.clubName %>
