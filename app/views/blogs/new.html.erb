@@ -1,48 +1,31 @@
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="topnav.scss">
     <link rel="stylesheet" href="blogs.scss">
 </head>
+
 <body>
-
-<<<<<<< HEAD
-<div class="topnav">
-    <%= link_to 'Home', '/welcome/index' %>
-    <%= link_to'Clubs', '/clubs' %>
-    <%= link_to'Blogs', '/blogs' %>
-    <div class="search-container">
-    <form action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit">Submit</button>
-    </form>
-    </div>
-</div>
-
-<div class="title">
-    New Post
-</div>
-=======
     <%= render 'topnav' %>
-
-    <div id="id01" class="modal">
-        <%= render 'modal' %>
+    <%= render 'modal' %>
+    
+    <div class="title">
+        New Post
     </div>
->>>>>>> c267f75df9a76bd49a17bc9f0675101e39b9e4c2
 
-<%= form_for :blog, url: blogs_path do |f| %>
-<p>
-    title
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    body
-    <%= f.text_area :text %>
-</p>
-
-<p>
-    <%= f.submit %>
-</p>
+    <%= form_for :blog, url: blogs_path do |f| %>
+    <p>
+        title
+        <%= f.text_field :title %>
+    </p>
+    
+    <p>
+        body
+        <%= f.text_area :text %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
 
 <%end%>
 </body>

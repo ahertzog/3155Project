@@ -1,34 +1,35 @@
-<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="topnav.scss">
     <link rel="stylesheet" href="clubs.scss">
 </head>
+
 <body>
-
-<%= render 'topnav' %>
-
-<div class = title> 
-    <%= @club.clubName %>
-</div>
+    <%= render 'topnav' %>
+    <%= render 'modal' %>
     
-<div class = whoWeAre>
-    whoweare
-    <%= @club.whoWeAre %>
-</div>
-
-<div class = date>
-    date
-    <%= @club.date %>
-</div>
-
-<div>
-    location
-</div>
-
-<div class = contact>
-    phone
-    <%= @club.phone %>
-    email
-    <%= @club.email %>
-</div>
+    <div class="title"> 
+        <%= @club.clubName %>
+    </div>
+        
+    <div class="whoWeAre">
+        whoweare
+        <%= @club.whoWeAre %>
+    </div>
+    
+    <div class="date">
+        date
+        <%= @club.date %>
+    </div>
+    
+    <div>
+        location
+    </div>
+    
+    <div class="contact">
+        phone
+        <%= @club.phone %>
+        email
+        <%= @club.email %>
+    </div>
+</body>

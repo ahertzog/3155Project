@@ -1,23 +1,11 @@
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="topnav.scss">
     <link rel="stylesheet" href="blogs.scss">
 </head>
+
 <body>
-
     <%= render 'topnav' %>
+    <%= render 'modal' %>
 
-    <div id="id01" class="modal">
-        <%= render 'modal' %>
-    </div>
-
-    <script>
-    var modal = document.getElementById('id01');
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    </script>
 </body>
