@@ -2,10 +2,12 @@
     <%= link_to 'Niner Interact', '/welcome/index' %>
     <%= link_to'Clubs', '/clubs', class: 'active' %>
     <%= link_to'Blogs', '/blogs' %>
+    
     <div class="search-container">
-    <form action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit">Submit</button>
-    </form>
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit">Submit</button>
+            <loginbutton onclick="document.getElementById('id01').style.display='block'">Login</loginbutton>
+        </form>
     </div>
 </div>
