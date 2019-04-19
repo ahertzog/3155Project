@@ -1,2 +1,6 @@
 class Club < ApplicationRecord
+    has_many :blogs, dependent: :destroy
+    
+    #validates :title, presence: true, length: { minimum: 5 }
+    #validates :text, presence: true, length: { minimum: 10 }
 end
