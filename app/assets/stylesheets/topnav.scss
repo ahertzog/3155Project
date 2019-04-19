@@ -42,7 +42,6 @@ body {
 }
 
 .topnav .search-container button {
-    float: right;
     padding: 6px;
     margin-top: 8px;
     margin-right: 16px;
@@ -67,12 +66,9 @@ input[type=text], input[type=password] {
 loginbutton {
     background-color: #046A38;
     color: white;
-    padding: 10px 18px;
     position: relative;
-    margin-right: 14px;
-    margin-top: 20px;
-    float: right;
     width: auto;
+    padding: 12px 20px;
 }
 
 .modalloginbutton {
