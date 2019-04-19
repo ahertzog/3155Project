@@ -18,48 +18,25 @@
     </div>
 </div>
 
-<loginbutton onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</loginbutton>
-
-<div id="id01" class="modal">
-    <form class="modal-content animate" action="/action_page.php">
-        
-    <div class="container">
-        <p>
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        </p>
-        
-        <p>
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        </p>
-        
-        <p>
-        <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-        </p>
-        
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <modalloginbutton type="button" onclick="document.getElementById('id01').style.display='none'" class="modalloginbutton">Login</modalloginbutton>
-    </div>
-  </form>
+<div class="title">
+    New Post
 </div>
 
-<script>
+<%= form_for :blog, url: blogs_path do |f| %>
+<p>
+    title
+    <%= f.text_field :title %>
+</p>
 
-var modal = document.getElementById('id01');
+<p>
+    body
+    <%= f.text_area :text %>
+</p>
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+<p>
+    <%= f.submit %>
+</p>
 
-
+<%end%>
 </body>
 </html>
