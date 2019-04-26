@@ -8,31 +8,26 @@
     <%= render 'topnav' %>
     <%= render 'modal' %>
     
-    <div class="title"> 
+    <div class = "title">
         <%= @club.clubName %>
     </div>
-    <p>
-    <div class="whoWeAre">
-        whoweare
-        <%= @club.whoWeAre %>
-    </div>
-    </p>    
     
-    <div class="date">
-        date
-        <%= @club.date %>
-    </div>
-    
-    <p>
-    <div class ="location">
-        <%= @club.location %>
-    </div>
-    </p>
-    
-    <div class="contact">
-        phone
-        <%= @club.phone %>
-        email
-        <%= @club.email %>
-    </div>
+    <div class = "row">
+        <div class = "leftcolumn">
+            <div class = "card">
+                <%= @club.whoWeAre %>
+            </div>
+            <div class="card">
+                <%= @club.location %>
+            </div>
+        </div>
+        <div class = "rightcolumn">
+            <div class="card">
+                <%= @club.date %>
+                <%= @club.email %>
+                <%= @club.phone %>
+            </div>
+        </div>
+    </div>    
+
 </body>
