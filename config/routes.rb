@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy'
   
   resources :sessions, only: [:create, :destroy]
+  get 'welcome/index'
   resources :clubs
   resources :blogs
   
