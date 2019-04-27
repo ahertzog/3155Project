@@ -1,3 +1,4 @@
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="topnav.scss">
@@ -9,25 +10,37 @@
     <%= render 'modal' %>
     
     <div class = "title">
-        <%= @club.clubName %>
+        NINER INTERACT
     </div>
     
     <div class = "row">
         <div class = "leftcolumn">
             <div class = "card">
+                <h2><%= @club.clubName %></h2>
+                <p>
                 <%= @club.whoWeAre %>
+                </p>
             </div>
-            <div class="card">
-                <%= @club.location %>
+            <div class = "card">
+                <p>this is testing text for what a blog post would be listed as under the club</p>
+            </div>
+            <div class = "card">
+                <p>this is the next blog post that would be part of this club</p>
             </div>
         </div>
         <div class = "rightcolumn">
             <div class="card">
-                <%= @club.date %>
+                <p>We meet at <%= @club.location %> </p>
+                <p>On <%= @club.date %> </p>
+            </div>
+            <div class = "card">
+                <p>Contact us at: 
                 <%= @club.email %>
                 <%= @club.phone %>
+                </p>
             </div>
         </div>
     </div>    
 
 </body>
+</html>
