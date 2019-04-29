@@ -1,0 +1,31 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="topnav.scss">
+    <link rel="stylesheet" href="blogs.scss">
+</head>
+
+<body>
+    <%= render 'topnav' %>
+    <%= render 'modal' %>
+    
+    <div class="title">
+        New Post
+    </div>
+
+    <%= form_for :blog, url: blogs_path do |f| %>
+    <p>
+        title
+        <%= f.text_field :title %>
+    </p>
+    
+    <p>
+        body
+        <%= f.text_area :text %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+
+<%end%>
+</body>
