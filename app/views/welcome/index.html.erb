@@ -1,33 +1,24 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="topnav.scss">
-    <link rel="stylesheet" href="welcome.scss">
-</head>
+<%= render 'topnav' %>
+<%= render 'modal' %>
 
-<body>
-    <%= render 'topnav' %>
-    <%= render 'modal' %>
-
-    <div class="title">
-        NINER INTERACT
-    </div>
+<div class="title">
+    NINER INTERACT
+</div>
     
-    <%= image_tag('unccLogo.jpg', class: 'logo') %>
+<%= image_tag('unccLogo.jpg', class: 'logo') %>
     
-    <div class="flex-container" id="clubs">
-        <div><%= link_to('Club 1', '/clubs/4') %></div>
-        <div><%= link_to('Club 2', '/clubs/5') %></div>
-        <div><%= link_to('Club 3', '/clubs/6') %></div>
-        <div><%= link_to('Club 4', '/clubs/7') %></div>
-        <div><%= link_to('Club 5', '/clubs/8') %></div>
-    </div>
+<div class="flex-container" id="clubs">
+    <div><%= link_to('Club 1', '/clubs/4') %></div>
+    <div><%= link_to('Club 2', '/clubs/5') %></div>
+    <div><%= link_to('Club 3', '/clubs/6') %></div>
+    <div><%= link_to('Club 4', '/clubs/7') %></div>
+    <div><%= link_to('Club 5', '/clubs/8') %></div>
+</div>
     
-    <div class="flex-container" id="blogs">
-        <div><%= link_to('Blog 1', '/blogs/1') %></div>
-        <div><%= link_to('Blog 2', '/blogs/2') %></div>
-        <div><%= link_to('Blog 3', '/blogs/3') %></div>
-        <div><%= link_to('Blog 4', '/blogs/4') %></div>
-        <div><%= link_to('Blog 5', '/blogs/5') %></div>
-    </div>
-
-</body>
+<div class="flex-container" id="blogs">
+    <div><%= link_to('Blog 1', '/blogs/1') %></div>
+    <div><%= link_to('Blog 2', '/blogs/2') %></div>
+    <div><%= link_to('Blog 3', '/blogs/3') %></div>
+    <div><%= link_to('Blog 4', '/blogs/4') %></div>
+    <div><%= link_to('Blog 5', '/blogs/5') %></div>
+</div>
