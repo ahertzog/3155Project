@@ -1,34 +1,23 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="topnav.scss">
-    <link rel="stylesheet" href="blogs.scss">
-</head>
-
-<body>
-    <%= render 'topnav' %>
-    <%= render 'modal' %>
+<%= render 'topnav' %>
+<%= render 'modal' %>
     
-    <div class="title">
-      Listing Blogs
-    </div>
+<div class="title">
+    Listing Blogs
+</div>
     
-    <a href="/blogs/new" class="new-blog-button">New Blog</a> 
+<%= link_to "New Blog", new_blog_path, class: 'new-blog-button' %>
     
-    <table id="blogs">
-      <tr>
-        <th>Blog Title</th>
-      </tr>
+<table id="blogs">
+  <tr>
+    <th>Blog Title</th>
+  </tr>
      
-      <% @blogs.each do |blog| %>
-        <tr>
-          <td><%= blog.title %></td>
-          <td><%= link_to 'View', blog_path(blog) %></td>
-          <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-          <td><%= link_to 'Delete', 
-                                  blog_path(blog),
-                                  method: :delete,
-                                  data: { confirm: 'Are you sure?' }%></td>
-        </tr>
-      <% end %>
-    </table>
-</body>
+  <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><%= link_to 'View', blog_path(blog) %></td>
+      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      <td><%= link_to 'Delete', blog_path(blog), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+    </tr>
+  <% end %>
+</table>

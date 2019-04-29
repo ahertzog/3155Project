@@ -1,19 +1,10 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="topnav.scss">
-    <link rel="stylesheet" href="blogs.scss">
-</head>
-
-<body>
-    <%= render 'topnav' %>
-    <%= render 'modal' %>
+<%= render 'topnav' %>
+<%= render 'modal' %>
     
-    <div class="title">
-        <%= @blog.title %>
-    </div>
-    
-    <div class="text">
-        <%= @blog.text %>
-    </div>
+<div class="title">
+    <%= @blog.title %>
+</div>
 
-</body>
+<div class="text">
+    <%= @blog.text %>
+</div>
