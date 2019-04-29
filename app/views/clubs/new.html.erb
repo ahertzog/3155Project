@@ -1,51 +1,6 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="topnav.scss">
-    <link rel="stylesheet" href="clubs.scss">
-</head>
-
-<body>
-    <%= render 'topnav' %>
-    <%= render 'modal' %>
+<%= render 'topnav' %>
+<%= render 'modal' %>
     
-    <div class="title"> New Club </div>
+<div class="title"> New Club </div>
     
-    <%= form_for :club, url: clubs_path do |f| %>
-        <p>
-            Club Name<br>
-            <%= f.text_field :clubName %>
-        </p>
-        
-        <p>
-            Who We Are<br>
-            <%= f.text_area :whoWeAre  %>
-        </p>
-        
-        <p>
-            When do you meet?<br>
-            <%= month_calendar do |date| %>
-              <%= date %>
-            <% end %>
-            <%= f.text_field :date %>
-        </p>
-        
-        <p>
-            Where do you meet?<br>
-            <%= f.text_area :location %>
-        </p>
-        
-        <p>
-            Contact phone<br>
-            <%= f.text_field :phone %>
-        </p>
-        
-        <p>
-            Contact email<br>
-            <%= f.text_field :email %>
-        </p>
-        
-        <p>
-            <%= f.submit %>
-        </p>
-    <% end %>
-</body>
+<%= render 'form' %>
