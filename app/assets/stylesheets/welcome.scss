@@ -34,16 +34,9 @@ body {
     position: absolute;
     right: 50px;
 }
-.text {
-    font-size: 24px;
-    color: #046A38;
-}
-* {
-  box-sizing: border-box;
-}
 
-/**********unknown**********/
-.flex-container { /*unknown*/
+/**********containers on welcome for clubs and blogs**********/
+.flex-container { /*container background*/
     display: flex;
     flex-direction: column;
     background-color: #046A38;
@@ -51,7 +44,7 @@ body {
     margin-left: 50px;
     justify-content: center;
 }
-.flex-container > div { /*unknown*/
+.flex-container > div { /*individual container items*/
     background-color: #B9975B;
     width: 400px;
     margin: 10px;
