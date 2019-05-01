@@ -1,28 +1,23 @@
-* {
-  box-sizing: border-box;
-}
-
+/**********element selectors**********/
 h1 {
     font-size: 32px;
     color: white;
     background: #046A38;
     text-align: center;
 }
-
 h2 {
     font-size: 20px;
     color: white;
     background: #046A38
 }
-
-body
-{
+body {
     color: black;
     background: white;
     padding: 10px;
 }
 
-.title {
+/**********class selectors**********/
+.title { /*styles the title text for pages*/
     font-size: 100px;
     font-family: 'TradeGothicLTStd-BdCn20',Helvetica,Arial,sans-serif;
     font-weight: 500;
@@ -33,15 +28,22 @@ body
     margin-bottom: 10px;
     padding: 30px;
 }
-
-.logo {
+.logo { /*styles the UNCC logo*/
     max-width: 30%;
     max-height: 30%;
     position: absolute;
     right: 50px;
 }
+.text {
+    font-size: 24px;
+    color: #046A38;
+}
+* {
+  box-sizing: border-box;
+}
 
-.flex-container {
+/**********unknown**********/
+.flex-container { /*unknown*/
     display: flex;
     flex-direction: column;
     background-color: #046A38;
@@ -49,17 +51,11 @@ body
     margin-left: 50px;
     justify-content: center;
 }
-
-.flex-container > div {
+.flex-container > div { /*unknown*/
     background-color: #B9975B;
     width: 400px;
     margin: 10px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
-}
-
-.text {
-    font-size: 24px;
-    color: #046A38;
 }
