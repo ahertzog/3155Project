@@ -1,3 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+    font-size: 32px;
+    color: white;
+    background: #046A38;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: white;
+    background: #046A38
+}
+
+body
+{
+    color: black;
+    background: white;
+    padding: 10px;
+}
+
 .title {
     font-size: 100px;
     font-family: 'TradeGothicLTStd-BdCn20',Helvetica,Arial,sans-serif;
@@ -7,24 +31,16 @@
     text-shadow: 0 0 10px rgba(0,0,0,0.4);
     margin-top: 20px;
     margin-bottom: 10px;
+    padding: 30px;
 }
-h1 {
-    font-size: 32px;
-    color: white;
-    background: #046A38;
-    text-align: center;
-}
-body
-{
-    color: black;
-    background: white;
-}
+
 .logo {
     max-width: 30%;
     max-height: 30%;
     position: absolute;
     right: 50px;
 }
+
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -33,9 +49,7 @@ body
     margin-left: 50px;
     justify-content: center;
 }
-#clubs {
-    float: left;
-}
+
 .flex-container > div {
     background-color: #B9975B;
     width: 400px;
@@ -44,6 +58,8 @@ body
     line-height: 75px;
     font-size: 30px;
 }
-#blogs {
-    margin-left: 800px;
+
+.text {
+    font-size: 24px;
+    color: #046A38;
 }

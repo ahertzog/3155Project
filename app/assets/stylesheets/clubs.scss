@@ -1,40 +1,8 @@
-.title {
-    font-size: 100px;
-    font-family: 'TradeGothicLTStd-BdCn20',Helvetica,Arial,sans-serif;
-    font-weight: 500;
-    color: #046A38;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(0,0,0,0.4);
-    margin-top: 20px;
-    margin-bottom: 10px;
-    padding: 30px;
-}
-
-body {
-  padding: 10px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-h1 {
-    font-size: 32px;
-    color: white;
-    background: #046A38;
-    text-align: center;
-}
-
-h2 {
-    font-size: 20px;
-    color: white;
-    background: #046A38
-}
-
 #clubs {
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
+    float: left;
 }
 
 #clubs th {
