@@ -1,14 +1,15 @@
 <div class="topnav">
-    <%= link_to 'Niner Interact', '/welcome/index' %>
+    <%= link_to 'Niner Interact', '/welcome/index'%>
     <%= link_to 'Clubs', clubs_path %>
-    <%= link_to 'Meetings', club_meetings_path(:club_id), class: 'active' %>
+    <%= link_to 'Meetings', club_meetings_path(:club_id), class: 'active'  %>
     <%= link_to 'Blogs', club_meeting_blogs_path(:club_id, :meeting_id) %>
     
-    <div class="search-container">
-        <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit">Submit</button>
-            <loginbutton onclick="document.getElementById('id01').style.display='block'">Login</loginbutton>
-        </form>
+    <div class = "loginbutton">
+        <% if current_user %>
+            Signed in as <strong><%= current_user.name %></strong>!
+            <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+            <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+        <% end %>
     </div>
 </div>
