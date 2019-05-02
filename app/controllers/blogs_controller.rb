@@ -1,7 +1,15 @@
 class BlogsController < ApplicationController
+    def index
+        @blogs = Blog.all
+    end
+    
+    def new
+        @blog = Blog.new
+    end
+    
     def create
         @meeting = meeting.find(params[:meeting_id])
-        @blog = @meeting.comments.create(meeting_params)
+        @blog = @meeting.blogs.create(meeting_params)
         redirect_to meeting_path(@meeting)
     end
     

@@ -4,7 +4,7 @@
     Listing Blogs
 </div>
     
-<%= link_to "New Blog", new_blog_path, class: 'new-blog-button' %>
+<%= link_to "New Blog", new_club_meeting_blog_path, class: 'new-blog-button' %>
     
 <table id="blogs">
   <tr>
@@ -15,8 +15,8 @@
     <tr>
       <td><%= blog.title %></td>
       <td><%= link_to 'View', blog_path(blog) %></td>
-      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-      <td><%= link_to 'Delete', blog_path(blog), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      <td><%= link_to 'Edit', edit_club_meeting_blog_path %></td>
+      <td><%= link_to 'Delete', club_meeting_blog_path, method: :delete, data: { confirm: 'Are you sure?' }%></td>
     </tr>
   <% end %>
 </table>
