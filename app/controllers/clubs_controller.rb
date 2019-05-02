@@ -46,7 +46,5 @@ end
 
 private
     def club_params
-        params.require(:club).permit(:clubName, :whoWeAre, :dates, :location, :phone, :email)
+        params.require(:club).permit(:name, :description, :contact)
     end
-
-

@@ -10,24 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_23_193920) do
+ActiveRecord::Schema.define(version: 2019_05_02_144837) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
     t.text "text"
+    t.integer "meeting_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meeting_id"], name: "index_blogs_on_meeting_id"
+  end
+
+  create_table "clubs", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.text "contact"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "clubs", force: :cascade do |t|
-    t.string "clubName"
-    t.text "whoWeAre"
-    t.string "date"
+  create_table "meetings", force: :cascade do |t|
+    t.string "purpose"
+    t.string "timeStamp"
     t.string "location"
-    t.string "phone"
-    t.string "email"
+    t.integer "club_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_meetings_on_club_id"
   end
 
   create_table "users", force: :cascade do |t|
