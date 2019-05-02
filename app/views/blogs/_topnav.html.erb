@@ -1,7 +1,8 @@
 <div class="topnav">
     <%= link_to 'Niner Interact', '/welcome/index' %>
-    <%= link_to 'Clubs', '/clubs' %>
-    <%= link_to 'Blogs', '/blogs', class: 'active' %>
+    <%= link_to 'Clubs', clubs_path %>
+    <%= link_to 'Meetings', club_meetings_path(:club_id) %>
+    <%= link_to 'Blogs', club_meeting_blogs_path(:club_id, :meeting_id), class: 'active' %>
     
     <div class="search-container">
         <form action="/action_page.php">
