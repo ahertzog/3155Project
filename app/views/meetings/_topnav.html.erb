@@ -2,7 +2,7 @@
     <%= link_to 'Niner Interact', '/welcome/index'%>
     <%= link_to 'Clubs', clubs_path %>
     <%= link_to 'Meetings', club_meetings_path(:club_id), class: 'active'  %>
-    <%= link_to 'Blogs', club_meeting_blogs_path(:club_id, :meeting_id) %>
+    <%= link_to 'Blogs', blogs_path %>
     
     <div class = "loginbutton">
         <% if current_user %>

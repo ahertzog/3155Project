@@ -7,17 +7,40 @@ class BlogsController < ApplicationController
         @blog = Blog.new
     end
     
+    def show
+        @blog = Blog.find(params[:id])
+    end
+    
     def create
-        @meeting = Meeting.find(params[:meeting_id])
-        @blog = @meeting.blogs.create(blog_params)
-        redirect_to meeting_path(@meeting)
+        @blog = Blog.new(blog_params)
+        
+        
+        if @blog.save
+            redirect_to @blog
+        else
+            render 'new'
+        end
     end
     
     def destroy
-        @meeting = meeting.find(params[:meeting_id])
-        @blog = @meeting.blogs.find(params[:id])
+        @blog = Blog.find(params[:id])
         @blog.destroy
-        redirect_to meeting_path(@meeting)
+        
+        redirect_to blogs_path
+    end
+    
+    def edit
+        @blog = Blog.find(params[:id])
+    end
+    
+    def update
+        @blog = Blog.find(params[:id])
+        
+        if @blog.update(blog_params)
+            redirect_to @blog
+        else
+            render 'edit'
+        end
     end
 end
 
