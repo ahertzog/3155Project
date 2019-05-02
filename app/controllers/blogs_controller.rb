@@ -8,8 +8,8 @@ class BlogsController < ApplicationController
     end
     
     def create
-        @meeting = meeting.find(params[:meeting_id])
-        @blog = @meeting.blogs.create(meeting_params)
+        @meeting = Meeting.find(params[:meeting_id])
+        @blog = @meeting.blogs.create(blog_params)
         redirect_to meeting_path(@meeting)
     end
     
