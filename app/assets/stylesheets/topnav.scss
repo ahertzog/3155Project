@@ -27,6 +27,20 @@
 /**********login**********/
 .topnav .loginbutton {
     float: right;
+    background: #B9975B;
+    color: white;
+}
+
+.topnav .loginbutton a:hover {
+    background-color: #B9975B;
+    opacity: .9;
+}
+
+.topnav .loginname {
+    float: right;
+    color: white;
+    font-size: 17px;
+    padding: 14px 16px;
 }
 
 .animate {
