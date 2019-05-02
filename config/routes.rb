@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy'
@@ -7,10 +6,10 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   get 'welcome/index'
   
+  resources :blogs
+  
   resources :clubs do
-    resources :meetings do
-      resources :blogs
-    end
+    resources :meetings
   end
   
   root 'welcome#index'

@@ -4,8 +4,8 @@
     Listing Blogs
 </div>
     
-<%= link_to "Select meeting to create blog", club_meetings_path, class: 'button' %>
-    
+<%= link_to "Submit new post", "/blogs/new", class: 'button' %>
+
 <table id="blogs">
   <tr>
     <th>Blog Title</th>
@@ -15,8 +15,8 @@
     <tr>
       <td><%= blog.title %></td>
       <td><%= link_to 'View', blog_path(blog) %></td>
-      <td><%= link_to 'Edit', edit_club_meeting_blog_path %></td>
-      <td><%= link_to 'Delete', club_meeting_blog_path, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      <td><%= link_to 'Delete', blogs_path(blog), method: :delete, data: { confirm: 'Are you sure?' }%></td>
     </tr>
   <% end %>
 </table>
