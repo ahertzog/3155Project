@@ -20,114 +20,13 @@
 }
 .topnav a:hover { /*hovered links are gold*/
     background-color: #B9975B;
+    opacity: .9;
     color: white;
 }
 
-/**********search and login**********/
-.topnav .search-container { /*aligns them right*/
+/**********login**********/
+.topnav .loginbutton {
     float: right;
-}
-.topnav input[type=text] { /*styles the search bar*/
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-}
-.topnav .search-container button { /*styles the search button*/
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #B9975B;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    color: white;
-}
-.topnav .search-container button:hover { /*hovered cursor changes*/
-    background: #ccc;
-}
-loginbutton { /*styles the login button*/
-    background-color: #046A38;
-    color: white;
-    position: relative;
-    width: auto;
-    padding: 12px 20px;
-}
-loginbutton:hover { /*changnes behaviour after hovering*/
-    background-color: #B9975B;
-    color: white;
-    cursor: pointer;
-    margin-right: 4px;
-}
-
-
-
-
-
-
-
-/**********login modal**********/
-input[type=text], input[type=password] { /*styles login input*/
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-.modalloginbutton { /*styles login button*/
-    background-color: #046A38;
-    color: white;
-    padding: 10px 18px;
-    float: right;
-    width: auto;
-    cursor: pointer;
-}
-.cancelbtn { /*styles modal cancel button*/
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-.container { /*adds padding to modal container*/
-    padding: 16px;
-}
-
-// span.psw {
-//     float: right;
-//     padding-top: 16px;
-// }
-
-.modal { /*creates the modal*/
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
-.modal-content { /*organizes modal content*/
-    background-color: #fefefe;
-    margin: 5% auto 15% auto;
-    border: 1px solid #888;
-    width: 50%;
-}
-
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: red;
-    cursor: pointer;
 }
 
 .animate {
@@ -143,37 +42,4 @@ input[type=text], input[type=password] { /*styles login input*/
 @keyframes animatezoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
-}
-
-
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-    
-    .cancelbtn {
-        width: 100%;
-    }
-    
-    .modalloginbutton {
-        width: 100%;
-    }
-    
-    .topnav .search-container {
-        float: none;
-    }
-    
-    .topnav a, .topnav input[type=text], .topnav .search-container button {
-        float: none;
-        display: block;
-        text-align: left;
-        width: 100%;
-        margin: 0;
-        padding: 14px;
-    }
-    
-    .topnav input[type=text] {
-        border: 1px solid #ccc;
-    }
 }
