@@ -21,6 +21,6 @@ class MeetingsController < ApplicationController
 end
 
 private
-    def club_params
-        params.require(:club).permit(:purpose, :timeStamp, :location)
+    def meeting_params
+        params.require(:meeting).permit(:purpose, :timeStamp, :location)
     end

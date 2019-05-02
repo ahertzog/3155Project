@@ -1,0 +1,20 @@
+ <p>
+    <strong>Commenter:</strong>
+    <%= meeting.purpose %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= meeting.timeStamp %>
+  </p>
+  
+<p>
+    <strong>Comment:</strong>
+    <%= meeting.location %>
+  </p>
+  
+  <p>
+      <%= link_to 'Destroy Comment', [meeting.club, meeting],
+          method: :delete,
+          data: { confrirm: 'Are you sure?'} %>
+    </p>
