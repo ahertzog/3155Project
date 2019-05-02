@@ -2,7 +2,7 @@
 <%= render 'modal' %>
 
 <div class="title">
-  Listing Clubs
+  Listing Meetings
 </div>
     
 <a href="/meetings/new" class="new-meeting-button">New Club</a> 
@@ -14,11 +14,11 @@
     <th>Contact</th>
   </tr>
      
-  <% @clubs.each do |club| %>
+  <% @meetings.each do |club| %>
     <tr>
-      <td><%= club.name %></td>
-      <td><%= club.description %></td>
-      <td><%= club.contact %></td>
+      <td><%= meeting.purpose %></td>
+      <td><%= meeting.description %></td>
+      <td><%= meeting.contact %></td>
       <td><%= link_to 'View', club_path(club) %></td>
       <td><%= link_to 'Edit', edit_club_path(club) %></td>
       <td><%= link_to 'Delete', club_path(club), method: :delete, data: { confirm: 'Are you sure?' }%></td>
