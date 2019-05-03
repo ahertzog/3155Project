@@ -4,7 +4,7 @@
   Listing Clubs
 </div>
     
-<a href="/clubs/new" class="button">New Club</a> 
+<%= link_to 'New Club', new_club_path, class: 'button'%>
     
     <% if current_user %>
 <table id="clubs">
