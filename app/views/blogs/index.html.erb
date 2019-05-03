@@ -10,7 +10,8 @@
   <tr>
     <th>Blog Title</th>
   </tr>
-     
+
+<% if (current_user) %>
   <% @blogs.each do |blog| %>
     <tr>
       <td><%= blog.title %></td>
@@ -19,4 +20,12 @@
       <td><%= link_to 'Delete', blogs_path(blog), method: :delete, data: { confirm: 'Are you sure?' }%></td>
     </tr>
   <% end %>
+<% else %>
+  <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><%= link_to 'View', blog_path(blog) %></td>
+    </tr>
+  <% end %>
 </table>
+<% end %>

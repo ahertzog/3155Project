@@ -1,23 +1,44 @@
 <%= render 'topnav' %>
 
 <div class="title">
-    NINER INTERACT
+    Niner Interact
 </div>
     
 <%= image_tag('unccLogo.jpg', class: 'logo') %>
 
 <div>
-    Welcome to Niner Interact. You can view existing clubs, meetings, and blogs using the navigation above.
+    Welcome to Niner Interact. Discover unique opportunities both in and outside of the classroom.
 </div>
 
 <div>
-    If you'd like to create your own club, use this link.
+    Join a new organization today!
+    <% club = Club.find(1,2) %>
+    <table id="homeTable">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Contact</th>
+  </tr>
+     
+  <% club.each do |club| %>
+    <tr>
+      <td><%= club.name %></td>
+      <td><%= club.description %></td>
+      <td><%= club.contact %></td>
+      <td><%= link_to 'View', club_path(club) %></td>
+      </tr>
+  <% end %>
+</table>
 </div>
 
 <div>
-    To create a meeting, use this link.
+    Attend events.
+    <% meeting = Meeting.find(1) %>
+    <%= meeting.purpose %>
 </div>
 
 <div>
-    To create a new blog post, use this link.
+    Blog list
+    <% blog = Blog.find(1) %>
+    <%= blog.title %>
 </div>
