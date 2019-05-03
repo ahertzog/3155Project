@@ -67,23 +67,47 @@ body {
     background: #B9975B;
 }
 
-#homeTable {
+/**********styles the table to be half length**********/
+#halfTable {
     border-collapse: collapse;
     width: 50%;
     margin-top: 20px;
     float: left;
 }
-#homeTable tr:nth-child(even) { /*rows alternate color*/
+#halfTable tr:nth-child(even) { /*rows alternate color*/
     background-color: #f2f2f2;
 }
-#homeTable th { /*styles table headers*/
+#halfTable th { /*styles table headers*/
     font-size: 20px;
     padding-top: 10px;
     text-align: center;
     background-color: #046A38;
     color: white;
 }
-#homeTable td { /*styles table data*/
+#halfTable td { /*styles table data*/
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/**********whole table styling**********/
+#wholeTable { /*table of clubs on index*/
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    float: left;
+}
+#wholeTable tr:nth-child(even) { /*rows alternate color*/
+    background-color: #f2f2f2;
+}
+#wholeTable th { /*styles table headers*/
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #046A38;
+    color: white;
+}
+#wholeTable td { /*styles table data*/
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
