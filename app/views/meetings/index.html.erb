@@ -13,14 +13,11 @@
     <th>Contact</th>
   </tr>
      
-  <% @meetings.each do |club| %>
+  <% @meetings.each do |meeting| %>
     <tr>
       <td><%= meeting.purpose %></td>
-      <td><%= meeting.description %></td>
-      <td><%= meeting.contact %></td>
-      <td><%= link_to 'View', club_path(club) %></td>
-      <td><%= link_to 'Edit', edit_club_path(club) %></td>
-      <td><%= link_to 'Delete', club_path(club), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      <td><%= meeting.timeStamp %></td>
+      <td><%= meeting.location %></td>
       </tr>
   <% end %>
 </table>
