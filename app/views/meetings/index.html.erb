@@ -9,8 +9,9 @@
 <table id="clubs">
   <tr>
     <th>Name</th>
-    <th>Description</th>
-    <th>Contact</th>
+    <th>Timestamp</th>
+    <th>Location</th>
+    <th>Club</th>
   </tr>
      
   <% @meetings.each do |meeting| %>
@@ -18,6 +19,7 @@
       <td><%= meeting.purpose %></td>
       <td><%= meeting.timeStamp %></td>
       <td><%= meeting.location %></td>
-      </tr>
+      <td><%= link_to meeting.club.name, club_path(meeting.club) %></td>
+    </tr>
   <% end %>
 </table>
