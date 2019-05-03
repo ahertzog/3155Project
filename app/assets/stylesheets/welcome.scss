@@ -66,3 +66,25 @@ body {
 .button:hover { /*changes cursor*/
     background: #B9975B;
 }
+
+#homeTable {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 20px;
+    float: left;
+}
+#homeTable tr:nth-child(even) { /*rows alternate color*/
+    background-color: #f2f2f2;
+}
+#homeTable th { /*styles table headers*/
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #046A38;
+    color: white;
+}
+#homeTable td { /*styles table data*/
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}

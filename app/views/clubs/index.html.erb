@@ -6,13 +6,13 @@
     
 <a href="/clubs/new" class="button">New Club</a> 
     
+    <% if current_user %>
 <table id="clubs">
   <tr>
     <th>Name</th>
     <th>Description</th>
     <th>Contact</th>
   </tr>
-     
   <% @clubs.each do |club| %>
     <tr>
       <td><%= club.name %></td>
@@ -24,3 +24,20 @@
       </tr>
   <% end %>
 </table>
+    <% else %>
+<table id="clubs">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Contact</th>
+  </tr>
+  <% @clubs.each do |club| %>
+    <tr>
+      <td><%= club.name %></td>
+      <td><%= club.description %></td>
+      <td><%= club.contact %></td>
+      <td><%= link_to 'View', club_path(club) %></td>
+      </tr>
+  <% end %>
+</table>
+  <% end %>
