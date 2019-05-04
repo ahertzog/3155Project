@@ -3,8 +3,6 @@
 <div class="title">
     Listing Posts
 </div>
-    
-<%= link_to "Submit new post", "/blogs/new", class: 'button' %>
 
 <% if (current_user) %>
 <table id="wholeTable">
@@ -25,20 +23,26 @@
 >>>>>>> 6203925dc18862b3aaaccca7bff1785654069970:app/views/posts/index.html.erb
     <tr>
       <td><%= post.title %></td>
+      <td><%= post.body %></td>
       <td><%= link_to 'View', blog_path(blog) %></td>
       <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
       <td><%= link_to 'Delete', blogs_path(blog), method: :delete, data: { confirm: 'Are you sure?' }%></td>
     </tr>
   <% end %>
 <% else %>
+<<<<<<< HEAD
+  <% @posts.each do |post| %>
+=======
 <table id="wholeTable">
   <tr>
     <th>Blog Title</th>
     <th></th>
   </tr>
   <% @blogs.each do |blog| %>
+>>>>>>> 7a503f6c399782de904ae86bc6038affc9781cb4
     <tr>
-      <td><%= blog.title %></td>
+      <td><%= post.title %></td>
+      <td><%= post.body %></td>
       <td><%= link_to 'View', blog_path(blog) %></td>
     </tr>
   <% end %>
