@@ -1,20 +1,18 @@
- <p>
-    <strong>Commenter:</strong>
+<p>
+    <strong>Purpose:</strong>
     <%= meeting.purpose %>
-  </p>
+</p>
  
-  <p>
-    <strong>Comment:</strong>
+<p>
+    <strong>Timestamp:</strong>
     <%= meeting.timeStamp %>
-  </p>
+</p>
   
 <p>
-    <strong>Comment:</strong>
+    <strong>Location:</strong>
     <%= meeting.location %>
-  </p>
+</p>
   
-  <p>
-      <%= link_to 'Destroy Comment', [meeting.club, meeting],
-          method: :delete,
-          data: { confrirm: 'Are you sure?'} %>
-    </p>
+<p>
+    <%= link_to 'Destroy', [meeting.club, meeting], method: :delete, data: { confrirm: 'Are you sure?'}, class:'button' %>
+</p>
