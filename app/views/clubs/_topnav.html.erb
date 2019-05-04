@@ -6,7 +6,7 @@
     <%= link_to 'Niner Interact', '/welcome/index'%>
     <%= link_to 'Clubs', clubs_path, class: 'active' %>
     <%= link_to 'Meetings', club_meetings_path(:club_id) %>
-    <%= link_to 'Blogs', blogs_path %>
+    <%= link_to 'Posts', club_posts_path(:club_id) %>
     
     <div class = "loginbutton">
         <% if current_user %>

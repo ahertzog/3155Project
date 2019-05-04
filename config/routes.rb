@@ -6,10 +6,9 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   get 'welcome/index'
   
-  resources :blogs
-  
   resources :clubs do
     resources :meetings
+    resources :posts
   end
   
   root 'welcome#index'

@@ -3,10 +3,10 @@
 </div>
 
 <div class="topnav">
-    <%= link_to 'Niner Interact', '/welcome/index', class: 'active' %>
+    <%= link_to 'Niner Interact', '/welcome/index'%>
     <%= link_to 'Clubs', clubs_path %>
     <%= link_to 'Meetings', club_meetings_path(:club_id) %>
-    <%= link_to 'Posts', club_posts_path(:club_id) %>
+    <%= link_to 'Posts', club_posts_path, class: 'active'  %>
     
     <div class = "loginbutton">
         <% if current_user %>
