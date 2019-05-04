@@ -7,8 +7,6 @@
     background-color: #B9975B;
     color: white;
 }
-
-/**********navigation link behaviour**********/
 .topnav a { /*styles the links*/
     float: left;
     display: block;
@@ -24,10 +22,17 @@
     color: white;
 }
 
+/**********website header**********/
+.header {
+  background-color: #046A38;
+  text-align: center;
+  padding: 40px;
+}
+
 /**********login**********/
 .topnav .loginbutton {
     float: right;
-    background: #B9975B;
+    background: #046A38;
     color: white;
 }
 
