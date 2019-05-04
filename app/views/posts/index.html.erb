@@ -12,8 +12,9 @@
     </tr>
   
   <% @posts.each do |post| %>
-    <th><%= post.title %></th>
-    <th><%= post.body %></th>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.body %></td>
   </tr>
   <% end %>
   </table>
