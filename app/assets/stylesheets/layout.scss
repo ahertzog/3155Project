@@ -1,4 +1,4 @@
-/**********top navigation appearance**********/
+/**********top navigation bar**********/
 .topnav { /*makes background green*/
     overflow: hidden;
     background-color: #046A38;
@@ -22,11 +22,16 @@
     color: white;
 }
 
-/**********website header**********/
+/**********page beginning and end**********/
 .header {
   background-color: #046A38;
   text-align: center;
   padding: 40px;
+}
+.footer {
+  background-color: #046A38;
+  text-align: center;
+  padding: 10px;
 }
 
 /**********login**********/
