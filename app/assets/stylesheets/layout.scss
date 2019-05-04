@@ -1,4 +1,4 @@
-/**********top navigation appearance**********/
+/**********top navigation bar**********/
 .topnav { /*makes background green*/
     overflow: hidden;
     background-color: #046A38;
@@ -7,8 +7,6 @@
     background-color: #B9975B;
     color: white;
 }
-
-/**********navigation link behaviour**********/
 .topnav a { /*styles the links*/
     float: left;
     display: block;
@@ -24,10 +22,22 @@
     color: white;
 }
 
+/**********page beginning and end**********/
+.header {
+  background-color: #046A38;
+  text-align: center;
+  padding: 40px;
+}
+.footer {
+  background-color: #046A38;
+  text-align: center;
+  padding: 10px;
+}
+
 /**********login**********/
 .topnav .loginbutton {
     float: right;
-    background: #B9975B;
+    background: #046A38;
     color: white;
 }
 
@@ -41,19 +51,4 @@
     color: white;
     font-size: 17px;
     padding: 14px 16px;
-}
-
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
 }

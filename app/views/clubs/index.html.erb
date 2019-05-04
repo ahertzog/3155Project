@@ -4,40 +4,44 @@
   Listing Clubs
 </div>
     
-<a href="/clubs/new" class="button">New Club</a> 
+<%= link_to 'New Club', new_club_path, class: 'button'%>
     
-    <% if current_user %>
-<table id="clubs">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Contact</th>
-  </tr>
-  <% @clubs.each do |club| %>
+<% if current_user %>
+  <table id="wholeTable">
     <tr>
-      <td><%= club.name %></td>
-      <td><%= club.description %></td>
-      <td><%= club.contact %></td>
-      <td><%= link_to 'View', club_path(club) %></td>
-      <td><%= link_to 'Edit', edit_club_path(club) %></td>
-      <td><%= link_to 'Delete', club_path(club), method: :delete, data: { confirm: 'Are you sure?' }%></td>
-      </tr>
-  <% end %>
-</table>
-    <% else %>
-<table id="clubs">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Contact</th>
-  </tr>
-  <% @clubs.each do |club| %>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Contact</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <% @clubs.each do |club| %>
+      <tr>
+        <td><%= club.name %></td>
+        <td><%= club.description %></td>
+        <td><%= club.contact %></td>
+        <td><%= link_to 'View', club_path(club) %></td>
+        <td><%= link_to 'Edit', edit_club_path(club) %></td>
+        <td><%= link_to 'Delete', club_path(club), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+        </tr>
+    <% end %>
+  </table>
+<% else %>
+  <table id="wholeTable">
     <tr>
-      <td><%= club.name %></td>
-      <td><%= club.description %></td>
-      <td><%= club.contact %></td>
-      <td><%= link_to 'View', club_path(club) %></td>
-      </tr>
-  <% end %>
-</table>
-  <% end %>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Contact</th>
+      <th></th>
+    </tr>
+    <% @clubs.each do |club| %>
+      <tr>
+        <td><%= club.name %></td>
+        <td><%= club.description %></td>
+        <td><%= club.contact %></td>
+        <td><%= link_to 'View', club_path(club) %></td>
+        </tr>
+    <% end %>
+  </table>
+<% end %>

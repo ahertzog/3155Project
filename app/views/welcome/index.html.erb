@@ -1,8 +1,10 @@
-<%= render 'topnav' %>
 
-<div class="title">
-    Niner Interact
+
+<div class="header">
+    <h1>Niner Interact</h1>
 </div>
+
+<%= render 'topnav' %>
     
 <%= image_tag('unccLogo.jpg', class: 'logo') %>
 
@@ -13,7 +15,7 @@
 <div>
     Join a new organization today!
     <% club = Club.find(1,2) %>
-    <table id="homeTable">
+    <table id="halfTable">
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -29,16 +31,4 @@
       </tr>
   <% end %>
 </table>
-</div>
-
-<div>
-    Attend events.
-    <% meeting = Meeting.find(1) %>
-    <%= meeting.purpose %>
-</div>
-
-<div>
-    Blog list
-    <% blog = Blog.find(1) %>
-    <%= blog.title %>
 </div>

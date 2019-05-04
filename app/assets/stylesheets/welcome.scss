@@ -13,7 +13,7 @@ h2 {
 body {
     color: black;
     background: white;
-    padding: 10px;
+    padding: 10px; /*code that messes up top navigation*/
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -37,53 +37,59 @@ body {
     right: 50px;
 }
 
-/**********containers on welcome for clubs and blogs**********/
-.flex-container { /*container background*/
-    display: flex;
-    flex-direction: column;
-    background-color: #046A38;
-    max-width: 35%;
-    margin-left: 50px;
-    justify-content: center;
-}
-.flex-container > div { /*individual container items*/
-    background-color: #B9975B;
-    width: 400px;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-}
-
 /**********styling buttons**********/
 .button { /*button to create club*/
     font-size: 20px;
     color: white;
     background: #046A38;
     padding: 14px;
-    // margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .button:hover { /*changes cursor*/
     background: #B9975B;
 }
 
-#homeTable {
+/**********styles the table to be half length**********/
+#halfTable {
     border-collapse: collapse;
     width: 50%;
     margin-top: 20px;
     float: left;
 }
-#homeTable tr:nth-child(even) { /*rows alternate color*/
+#halfTable tr:nth-child(even) { /*rows alternate color*/
     background-color: #f2f2f2;
 }
-#homeTable th { /*styles table headers*/
+#halfTable th { /*styles table headers*/
     font-size: 20px;
     padding-top: 10px;
     text-align: center;
     background-color: #046A38;
     color: white;
 }
-#homeTable td { /*styles table data*/
+#halfTable td { /*styles table data*/
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/**********whole table styling**********/
+#wholeTable { /*table of clubs on index*/
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    float: left;
+}
+#wholeTable tr:nth-child(even) { /*rows alternate color*/
+    background-color: #f2f2f2;
+}
+#wholeTable th { /*styles table headers*/
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #046A38;
+    color: white;
+}
+#wholeTable td { /*styles table data*/
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
