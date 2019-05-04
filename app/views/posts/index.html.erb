@@ -1,7 +1,7 @@
 <%= render 'topnav' %>
 
 <div class="title">
-    Listing Blogs
+    Listing Posts
 </div>
     
 <%= link_to "Submit new post", "/blogs/new", class: 'button' %>
@@ -9,14 +9,22 @@
 <% if (current_user) %>
 <table id="wholeTable">
   <tr>
+<<<<<<< HEAD:app/views/blogs/index.html.erb
     <th>Blog Title</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
   <% @blogs.each do |blog| %>
+=======
+    <th>Post Title</th>
+  </tr>
+
+<% if (current_user) %>
+  <% @posts.each do |post| %>
+>>>>>>> 6203925dc18862b3aaaccca7bff1785654069970:app/views/posts/index.html.erb
     <tr>
-      <td><%= blog.title %></td>
+      <td><%= post.title %></td>
       <td><%= link_to 'View', blog_path(blog) %></td>
       <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
       <td><%= link_to 'Delete', blogs_path(blog), method: :delete, data: { confirm: 'Are you sure?' }%></td>
