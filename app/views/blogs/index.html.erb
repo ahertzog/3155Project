@@ -6,12 +6,14 @@
     
 <%= link_to "Submit new post", "/blogs/new", class: 'button' %>
 
+<% if (current_user) %>
 <table id="wholeTable">
   <tr>
     <th>Blog Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
-
-<% if (current_user) %>
   <% @blogs.each do |blog| %>
     <tr>
       <td><%= blog.title %></td>
@@ -21,6 +23,11 @@
     </tr>
   <% end %>
 <% else %>
+<table id="wholeTable">
+  <tr>
+    <th>Blog Title</th>
+    <th></th>
+  </tr>
   <% @blogs.each do |blog| %>
     <tr>
       <td><%= blog.title %></td>
