@@ -1,0 +1,31 @@
+<%= render 'topnav' %>
+
+<div class="title">
+    Listing Posts
+</div>
+    
+<%= link_to "Submit new post", "/blogs/new", class: 'button' %>
+
+<table id="wholeTable">
+  <tr>
+    <th>Post Title</th>
+  </tr>
+
+<% if (current_user) %>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= link_to 'View', blog_path(blog) %></td>
+      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      <td><%= link_to 'Delete', blogs_path(blog), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+    </tr>
+  <% end %>
+<% else %>
+  <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><%= link_to 'View', blog_path(blog) %></td>
+    </tr>
+  <% end %>
+</table>
+<% end %>
