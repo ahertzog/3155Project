@@ -5,46 +5,30 @@
 </div>
 
 <% if (current_user) %>
-<table id="wholeTable">
-  <tr>
-<<<<<<< HEAD:app/views/blogs/index.html.erb
-    <th>Blog Title</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  <% @blogs.each do |blog| %>
-=======
-    <th>Post Title</th>
-  </tr>
-
-<% if (current_user) %>
-  <% @posts.each do |post| %>
->>>>>>> 6203925dc18862b3aaaccca7bff1785654069970:app/views/posts/index.html.erb
+  <table id="wholeTable">
     <tr>
-      <td><%= post.title %></td>
-      <td><%= post.body %></td>
-      <td><%= link_to 'View', blog_path(blog) %></td>
-      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-      <td><%= link_to 'Delete', blogs_path(blog), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      <th>Post Title</th>
+      <th>Post Body</th>
     </tr>
+  
+  <% @posts.each do |post| %>
+    <th><%= post.title %></th>
+    <th><%= post.body %></th>
+  </tr>
   <% end %>
+  </table>
 <% else %>
-<<<<<<< HEAD
+  <table id="wholeTable">
+    <tr>
+      <th>Blog Title</th>
+      <th>Blog Body</th>
+    </tr>
+  
   <% @posts.each do |post| %>
-=======
-<table id="wholeTable">
-  <tr>
-    <th>Blog Title</th>
-    <th></th>
-  </tr>
-  <% @blogs.each do |blog| %>
->>>>>>> 7a503f6c399782de904ae86bc6038affc9781cb4
     <tr>
       <td><%= post.title %></td>
       <td><%= post.body %></td>
-      <td><%= link_to 'View', blog_path(blog) %></td>
     </tr>
   <% end %>
-</table>
+  </table>
 <% end %>
