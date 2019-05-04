@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_02_144837) do
-
-  create_table "blogs", force: :cascade do |t|
-    t.string "title"
-    t.text "text"
-    t.integer "meeting_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["meeting_id"], name: "index_blogs_on_meeting_id"
-  end
+ActiveRecord::Schema.define(version: 2019_05_04_174754) do
 
   create_table "clubs", force: :cascade do |t|
     t.string "name"
@@ -37,6 +28,15 @@ ActiveRecord::Schema.define(version: 2019_05_02_144837) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["club_id"], name: "index_meetings_on_club_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "club_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_posts_on_club_id"
   end
 
   create_table "users", force: :cascade do |t|
