@@ -1,23 +1,28 @@
-/**********experimenting with showing clubs**********/
-.leftcolumn {   
+/**********columns for meeting and post*/
+.column { /*creates the columns*/
   float: left;
-  width: 75%;
-  color: white;
+  width: 50%;
 }
-.rightcolumn {
-  float: right;
-  width: 25%;
-  background-color: #046A38;
-  padding-left: 20px;
-  color: white;
+.row:after { /* clear floats after the columns */
+  content: "";
+  display: table;
+  clear: both;
+  background-color: green;
 }
+@media screen and (max-width: 600px) { /*responsive layout*/
+  .column {
+    width: 100%;
+  }
+}
+
+/*create cards to split information*/
 .card {
   background-color: #046A38;
   padding: 20px;
   margin-top: 20px;
 }
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.part { /*cards within for dividing fields*/
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
 }
