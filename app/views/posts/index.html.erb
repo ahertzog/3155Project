@@ -4,17 +4,21 @@
     Listing Posts
 </div>
 
+<%= link_to "Select Club to Create Post", clubs_path, class: 'button' %>
+
 <% if (current_user) %>
   <table id="wholeTable">
     <tr>
       <th>Post Title</th>
       <th>Post Body</th>
+      <ht>
     </tr>
   
   <% @posts.each do |post| %>
   <tr>
     <td><%= post.title %></td>
     <td><%= post.body %></td>
+    <td><%= link_to post.club.name, club_path(post.club) %></td>
   </tr>
   <% end %>
   </table>
@@ -23,12 +27,14 @@
     <tr>
       <th>Blog Title</th>
       <th>Blog Body</th>
+      <th>
     </tr>
   
   <% @posts.each do |post| %>
     <tr>
       <td><%= post.title %></td>
       <td><%= post.body %></td>
+      <td><%= link_to post.club.name, club_path(post.club) %></td>
     </tr>
   <% end %>
   </table>

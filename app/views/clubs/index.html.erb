@@ -1,8 +1,12 @@
 <%= render 'topnav' %>
     
-<%= link_to 'New Club', new_club_path, class: 'button'%>
-    
+<div class="title">
+  Listing Clubs
+</div>
+
 <% if current_user %>
+  <%= link_to 'New Club', new_club_path, class: 'button'%>
+  
   <table id="wholeTable">
     <tr>
       <th>Name</th>
@@ -37,7 +41,7 @@
         <td><%= club.description %></td>
         <td><%= club.contact %></td>
         <td><%= link_to 'View', club_path(club) %></td>
-        </tr>
+      </tr>
     <% end %>
   </table>
 <% end %>
