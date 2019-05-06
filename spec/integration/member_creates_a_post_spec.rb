@@ -4,15 +4,15 @@ feature"Member creates a post" do
     scenario "Member successfully navigates to the posts page from the home page" do
         visit welcome_index_path
         expect(page).to have_content("NINER INTERACT")
-        click_link "Blogs"
-        expect(page).to have_content("Blog Title")
+        click_link "Posts"
+        expect(page).to have_content("Title")
     end
     
-    scenario "Member successfully creates a blog" do
+    scenario "Member successfully creates a post" do
         visit welcome_index_path
-        click_link "Blogs"
-        click_link "New Blog"
+        click_link "Posts"
+        click_link "New Post"
         expect(page).to have_content("New Post")
-        fill_in 'blog_title', with: "This is created by RSpec"
+        fill_in 'title', with: "This is created by RSpec"
     end
 end
