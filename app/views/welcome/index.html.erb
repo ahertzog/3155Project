@@ -6,24 +6,3 @@
     Welcome to Niner Interact. Discover unique opportunities both in and outside of the classroom.
 </div>
 
-<div>
-    Join a new organization today!
-    <% club = Club.find(4,2) %>
-    <table id="halfTable">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Contact</th>
-    <th></th>
-  </tr>
-     
-  <% club.each do |club| %>
-    <tr>
-      <td><%= club.name %></td>
-      <td><%= club.description %></td>
-      <td><%= club.contact %></td>
-      <td><%= link_to 'View', club_path(club) %></td>
-      </tr>
-  <% end %>
-</table>
-</div>
