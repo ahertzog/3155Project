@@ -13,8 +13,8 @@ feature"Member creates a meeting" do
         click_link "Clubs"
         click_link "Show"
         expect(page).to have_content("Add a meeting:")
-        fill_in 'blog_title', with: "RSpec purpose"
-        fill_in 'blog_title', with: "RSpec timeStamp"
-        fill_in 'blog_title', with: "RSpec location"
+        fill_in 'meeting_purpose', with: "RSpec purpose"
+        fill_in 'meeting_timeStamp', with: "RSpec timeStamp"
+        fill_in 'meeting_location', with: "RSpec location"
     end
 end
