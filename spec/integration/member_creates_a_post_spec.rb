@@ -8,9 +8,12 @@ feature"Member creates a post" do
         expect(page).to have_content("Title")
     end
     
-    scenario "Member successfully creates a blog" do
+    scenario "Member navigates from the posts page to the clubs page" do
         visit welcome_index_path
+        expect(page).to have_content("NINER INTERACT")
         click_link "Posts"
-        
+        expect(page).to have_content("Title")
+        click_link "Select Club to Create Post"
+        expect(page).to have_content("Listing Clubs")
     end
 end
