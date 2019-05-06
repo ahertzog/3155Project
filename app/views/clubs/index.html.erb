@@ -4,7 +4,8 @@
   Listing Clubs
 </div>
 
-<%= link_to 'New Club', new_club_path, class: 'button'%>
+<% if current_user %>
+  <%= link_to 'New Club', new_club_path, class: 'button'%>
   
   <table id="wholeTable">
     <tr>
@@ -26,3 +27,21 @@
         </tr>
     <% end %>
   </table>
+<% else %>
+  <table id="wholeTable">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Contact</th>
+      <th></th>
+    </tr>
+    <% @clubs.each do |club| %>
+      <tr>
+        <td><%= club.name %></td>
+        <td><%= club.description %></td>
+        <td><%= club.contact %></td>
+        <td><%= link_to 'Show', club_path(club) %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
