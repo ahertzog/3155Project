@@ -8,11 +8,9 @@ feature"Member creates a post" do
         expect(page).to have_content("Title")
     end
     
-    scenario "Member successfully creates a post" do
+    scenario "Member successfully creates a blog" do
         visit welcome_index_path
         click_link "Posts"
-        click_link "New Post"
-        expect(page).to have_content("New Post")
-        fill_in 'title', with: "This is created by RSpec"
+        
     end
 end
