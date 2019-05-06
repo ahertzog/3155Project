@@ -8,7 +8,7 @@
 
 <div>
     Join a new organization today!
-    <% club = Club.find(4,2) %>
+    <% @club = Club.all %>
     <table id="halfTable">
   <tr>
     <th>Name</th>
@@ -17,7 +17,7 @@
     <th></th>
   </tr>
      
-  <% club.each do |club| %>
+  <% @club.each do |club| %>
     <tr>
       <td><%= club.name %></td>
       <td><%= club.description %></td>
@@ -27,3 +27,4 @@
   <% end %>
 </table>
 </div>
+

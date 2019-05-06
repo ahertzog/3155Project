@@ -5,7 +5,7 @@ feature"Member edits a club" do
         visit welcome_index_path
         expect(page).to have_content("NINER INTERACT")
         click_link "Clubs"
-        expect(page).to have_content("Club Name")
+        expect(page).to have_content("Name")
         expect(page).to have_content("Contact")
     end
 =begin
